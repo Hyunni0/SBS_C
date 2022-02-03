@@ -11,6 +11,23 @@
 */
 #include <stdio.h>
 
-int main(void){
+void swap(int *a, int *b){
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main(){
+
+    int a = 10, b = 20;
+    printf("1 \n");
+    printf("a = %d, b = %d \n", a, b);
+
+    swap(&a, &b);
+
+    printf("2 \n");
+    printf("a = %d, b = %d \n", a, b);
+    
+    return 0;
 
 }
